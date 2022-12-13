@@ -3,8 +3,9 @@
 /**
  * main - prints all single digit numbers of base 10 starting from 0
  *
- * Retun: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int num = '0';
@@ -14,7 +15,6 @@ int main(void)
 		putchar(num);
 		num++;
 	}
-	
 	putchar('\n');
 	return (0);
 }
