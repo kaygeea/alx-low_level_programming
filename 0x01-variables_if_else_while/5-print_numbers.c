@@ -7,12 +7,9 @@
  */
 int main(void)
 {
-	int b = 0;
+	int ch;
 
-	while (b < 10)
-	{
-		printf("%d ", b);
-		b++;
-	}
+	for (ch = '0'; ch < 10; ch++)
+		putchar(ch);
 	return (0);
 }
