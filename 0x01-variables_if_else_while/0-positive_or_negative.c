@@ -6,7 +6,6 @@
  * main - code to generate random numbers
  *
  * Return - Always 0 (Success)
- *
  */
 
 int main(void)
