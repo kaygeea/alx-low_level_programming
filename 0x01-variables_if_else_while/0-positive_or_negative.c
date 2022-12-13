@@ -3,11 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - code to generate random numbers
+ * main - print random numbers
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int n;
