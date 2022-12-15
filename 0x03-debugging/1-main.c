@@ -2,7 +2,7 @@
 
 /**
  * main - causes an infinite loop
- * line 16
+ * no increment in line 15
  *
  * Return: 0
  */
