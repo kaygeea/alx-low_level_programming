@@ -2,7 +2,8 @@
 
 /**
  * main - causes an infinite loop
- * infinite loop caused by no increment in code line 16
+ * line 16
+ *
  * Return: 0
  */
 
