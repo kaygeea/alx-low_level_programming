@@ -2,18 +2,26 @@
 
 /**
  * more_numbers - prints numbers 10 times
+ *
+ * Return: 0 (Success)
  */
 void more_numbers(void)
 {
-	int i;
-	int j;
+	int i, j;
 
-	for (i = 1; i <= 10; i++)
+	i = 0;
+
+	while (i < 10)
 	{
-		for (j = 48; j <= 57; j++)
+		for (j = 0; j < 15; j++)
 		{
-			_putchar(j);
+			if (j >= 10)
+			{
+				_putchar((j / 10) + 48);
+			}
+			_putchar((j % 10) + 48);
 		}
 		_putchar('\n');
+		i++;
 	}
 }
