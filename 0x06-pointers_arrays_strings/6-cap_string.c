@@ -8,34 +8,29 @@
  */
 char *cap_string(char *strcap)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; strcap[i] != '\0'; i++)
+	while (strcap[i])
 	{
-		if (i == 0)
-		{
-			if (strcap[i] >= 'a' && strcap[i] <= 'z')
-				strcap[i] = strcap[i] - 32;
-			continue;
-		}
-		if (strcap[i - 1] == 32)
-		{
-			if (strcap[i] >= 'a' && strcap[i] <= 'z')
-			{
-				strcap[i] = strcap[i] - 32;
-				continue;
-			}
-		}
-		if (strcap[i - 1] == ' ' && strcap[i] == 'h')
-		{
-			strcap[i] = strcap[i] - 32;
-			continue;
-		}
-		else
-		{
-			if (strcap[i] >= 'A' && strcap[i] <= 'Z')
-				strcap[i] = strcap[i] + 32;
-		}
+		while (!(strcap[i] >= 'a' && strcap[i] <= 'z'))
+			i++;
+
+		if (strcap[i - 1] == 32 ||
+			strcap[i - 1] == '\t' ||
+			strcap[i - 1] == '\n' ||
+			strcap[i - 1] == 44 ||
+			strcap[i - 1] == 59 ||
+			strcap[i - 1] == 46 ||
+			strcap[i - 1] == 33 ||
+			strcap[i - 1] == 63 ||
+			strcap[i - 1] == 34 ||
+			strcap[i - 1] == 40 ||
+			strcap[i - 1] == 41 ||
+			strcap[i - 1] == 123 ||
+			strcap[i - 1] == 125 ||
+			i == 0)
+			strcap[i] -= 32;
+		i++;
 	}
 	return (strcap);
 }
