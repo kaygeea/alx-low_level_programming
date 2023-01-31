@@ -1,1 +1,1 @@
-Project on Doubly Linked List
+Project on Double Linked List
