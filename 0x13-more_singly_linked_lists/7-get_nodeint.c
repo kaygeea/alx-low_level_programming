@@ -13,9 +13,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int count = 0;
 
 	while (travNode && count < index)
-		{
-			travNode = travNode->next;
-			count++;
-		}
+	{
+		travNode = travNode->next;
+		count++;
+	}
 	return (travNode ? travNode : NULL);
 }
