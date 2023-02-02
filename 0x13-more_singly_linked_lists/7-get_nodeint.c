@@ -9,16 +9,13 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *travNode;
+	listint_t *travNode = head;
 	unsigned int count = 0;
 
-	travNode = head;
-	while (travNode != NULL)
-		if (index == count)
+	while (travNode && count < index)
 		{
-			return (travNode);
 			travNode = travNode->next;
 			count++;
 		}
-	return (travNode);
+	return (travNode ? travNode : NULL);
 }
