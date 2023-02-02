@@ -13,38 +13,31 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *newNode;
 	listint_t *travNode;
 	size_t count = 0;
-	size_t i;
 
 	travNode = *head;
 	newNode = malloc(sizeof(listint_t));
+	if (!newNode)
+		return (NULL);
 	newNode->n = n;
 	newNode->next = NULL;
 
-	while (travNode->next != NULL)
+	if (!*head && !idx)
 	{
-		count++;
+		*head = newNode;
+		return (newNode);
+	}
+	else if (!*head && idx)
+	{
+		newNode->next = travNode;
+		*head = newNode;
+		return (newNode);
+	}
+	while (count < (idx - 1))
+	{
 		travNode = travNode->next;
+		count++;
 	}
-	while (head)
-	{
-		if (idx > count)
-			return (NULL); /* watch out for seg fault */
-		if (idx == 1)
-		{
-			newNode->next = *head;
-			*head = newNode;
-		}
-		else
-		{
-			while (i < idx)
-			{
-				travNode = travNode->next;
-				i++;
-			}
-			idx--;
-			newNode->next = travNode->next;
-			travNode->next = newNode;
-		}
-	}
-	return (*head);
+	newNode->next = travNode->next;
+	travNode->next = newNode;
+	return (newNode);
 }
