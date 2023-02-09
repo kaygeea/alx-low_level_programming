@@ -8,14 +8,12 @@
  */
 int na_prime(int num)
 {
-	int i;
-
-	for (i = 2; i < num; i++)
+	if (num % 2 != 0)
 	{
-		if (num % i == 0)
-			return (0);
+		if (num % 3 != 0 || num % 5 != 0 || num % 7 != 0)
+			return (1);
 	}
-	return (1);
+	return (0);
 }
 
 /**
@@ -27,7 +25,7 @@ int na_prime(int num)
  */
 int is_prime_number(int n)
 {
-	if (n == 0)
+	if (n < 2)
 		return (0);
 	return (na_prime(n));
 }
