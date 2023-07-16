@@ -1,8 +1,8 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Uses a Jump Search Algorithm (JSA) to search for a value
- *                 in an sorted array of integers.
+ * jump_search - Uses a Jump Search Algorithm (JSA) to search for a value
+ *               in an sorted array of integers.
  *
  * @array: Incoming arg for a pointer to first elem of array to be searched.
  * @size: Incoming argument for number of elems in the array to be searched.
